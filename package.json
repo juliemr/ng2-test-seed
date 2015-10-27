@@ -14,16 +14,16 @@
     "serve": "http-server -p 9090 -c-1",
     "test": "karma start karma.conf.js"
   },
-  "devDependencies": {
+  "dependencies": {
     "angular2": "2.0.0-alpha.44",
+    "systemjs": "^0.19.4"
+  }
+  "devDependencies": {
     "http-server": "^0.8.5",
-    "jasmine": "2.3.2",
     "karma": "^0.12.23",
     "karma-chrome-launcher": "^0.1.4",
-    "karma-cli": "^0.0.4",
     "karma-jasmine": "^0.3.6",
     "rimraf": "^2.4.3",
-    "systemjs": "^0.19.4",
     "typescript": "1.6.2"
   }
 }
