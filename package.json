@@ -10,9 +10,11 @@
   "scripts": {
     "clean": "rimraf src/**/*.js src/**/*.js.map",
     "build": "tsc",
+    "lint": "tslint src/**/*.ts",
     "watch": "tsc --watch",
     "serve": "http-server -p 9090 -c-1",
-    "test": "karma start karma.conf.js"
+    "test": "karma start karma.conf.js",
+    "testsingle": "tsc && karma start karma.conf.js --single-run"
   },
   "devDependencies": {
     "angular2": "2.0.0-alpha.44",
@@ -24,6 +26,7 @@
     "karma-jasmine": "^0.3.6",
     "rimraf": "^2.4.3",
     "systemjs": "^0.19.4",
+    "tslint": "^3.0.0",
     "typescript": "1.6.2"
   }
 }
