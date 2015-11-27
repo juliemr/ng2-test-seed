@@ -13,7 +13,9 @@ System.config({
   packages: {
     'base/src/app': {
       defaultExtension: false,
-      format: 'register',
+      // see your tsconfig.json -- its important that the package is set up correctly
+      // When the module format is not set, automatic regular-expression-based detection is used. 
+      //format: 'register',
       map: Object.keys(window.__karma__.files).
             filter(onlyAppFiles).
             reduce(function createPathRecords(pathsMapping, appPath) {
