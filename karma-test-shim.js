@@ -11,6 +11,12 @@ __karma__.loaded = function() {};
 
 System.config({
   packages: {
+    'rxjs': {
+        defaultJSExtensions: true,
+        paths: {
+            'rxjs/*': 'node_modules/rxjs/*.js'
+        }
+    },
     'base/src/app': {
       defaultExtension: false,
       format: 'register',
@@ -28,7 +34,7 @@ System.config({
     }
 });
 
-System.import('angular2/src/core/dom/browser_adapter').then(function(browser_adapter) {
+System.import('angular2/src/platform/browser/browser_adapter').then(function(browser_adapter) {
   browser_adapter.BrowserDomAdapter.makeCurrent();
 }).then(function() {
   return Promise.all(

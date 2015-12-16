@@ -15,7 +15,13 @@
     "test": "karma start karma.conf.js"
   },
   "devDependencies": {
-    "angular2": "2.0.0-alpha.44",
+    "angular2": "^2.0.0-beta.00",
+    "systemjs": "^0.19.6",
+    "rxjs": "5.0.0-alpha.14",
+    "es6-promise": "^3.0.2",
+    "es6-shim": "^0.33.3",
+    "reflect-metadata": "0.1.2",
+    "zone.js": "0.5.8",
     "http-server": "^0.8.5",
     "jasmine": "2.3.2",
     "karma": "^0.12.23",

@@ -1,10 +1,11 @@
-import {Component, FORM_DIRECTIVES} from 'angular2/angular2';
+import {Component} from 'angular2/core';
+import {FORM_DIRECTIVES} from 'angular2/common';
 import {UserService} from './user-service';
 
 @Component({
   selector: 'my-greeting',
   template: `
-    <input [(ng-model)]="user.pin" placeholder="1111" type=number></input>
+    <input [(ngModel)]="user.pin" placeholder="1111" type=number>
     <button (click)="enter()">Enter</button>
     <h3>Status: {{greeting}}</h3>
   `,
