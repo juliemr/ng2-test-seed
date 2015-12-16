@@ -31,3 +31,4 @@ src/app/*.js
 src/app/*.map
 src/test/*.js
 src/test/*.map
+.idea
