@@ -11,6 +11,12 @@ __karma__.loaded = function() {};
 
 System.config({
   packages: {
+    'rxjs': {
+        defaultJSExtensions: true,
+        paths: {
+            'rxjs/*': 'node_modules/rxjs/*.js'
+        }
+    },
     'base/src/app': {
       defaultExtension: false,
       format: 'register',

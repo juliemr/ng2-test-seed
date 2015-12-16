@@ -7,9 +7,14 @@ module.exports = function(config) {
 
     files: [
       // paths loaded by Karma
+      {pattern: 'node_modules/rxjs/**/*.js', included: false, watched: false, served: true},
+      {pattern: 'node_modules/reflect-metadata/Reflect.js', included: true, watched: true},
+      {pattern: 'node_modules/es6-shim/es6-shim.js', included: true, watched: true},
+      {pattern: 'node_modules/zone.js/dist/zone-microtask.js', included: true, watched: true},
       {pattern: 'node_modules/systemjs/dist/system.src.js', included: true, watched: true},
       {pattern: 'node_modules/angular2/bundles/angular2.js', included: true, watched: true},
-      {pattern: 'node_modules/angular2/bundles/testing.js', included: true, watched: true},
+      {pattern: 'node_modules/angular2/bundles/testing.dev.js', included: true, watched: true},
+
       {pattern: 'karma-test-shim.js', included: true, watched: true},
       {pattern: 'src/test/matchers.js', included: true, watched: true},
 
@@ -29,7 +34,8 @@ module.exports = function(config) {
     // proxied base paths
     proxies: {
       // required for component assests fetched by Angular's compiler
-      "/app/": "/base/src/app/"
+      "/app/": "/base/src/app/",
+      "/rxjs/": "/base/node_modules/rxjs/"
     },
 
     reporters: ['progress'],
