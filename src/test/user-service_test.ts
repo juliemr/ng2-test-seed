@@ -1,5 +1,5 @@
 import { it, iit, describe, expect, inject, injectAsync, beforeEachProviders, fakeAsync, tick } from 'angular2/testing';
-import { provide } from 'angular2/angular2';
+import { provide } from 'angular2/core';
 import { UserService } from '../app/user-service';
 import { LoginService } from '../app/login-service';
 
