@@ -8,7 +8,7 @@ import {
   TestComponentBuilder,
   beforeEachProviders
 } from 'angular2/testing';
-import { Component } from 'angular2/angular2';
+import { Component } from 'angular2/core';
 import { BorderComponent } from '../app/border-component';
 
 @Component({
