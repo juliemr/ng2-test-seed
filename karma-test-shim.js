@@ -20,7 +20,7 @@ System.config({
               // creates local module name mapping to global path with karma's fingerprint in path, e.g.:
               // './hero.service': '/base/src/app/hero.service.js?f4523daf879cfb7310ef6242682ccf10b2041b3e'
               var moduleName = appPath.replace(/^\/base\/src\/app\//, './').replace(/\.js$/, '');
-              pathsMapping[moduleName] = appPath + '?' + window.__karma__.files[appPath]
+              pathsMapping[moduleName] = appPath + '?' + window.__karma__.files[appPath];
               return pathsMapping;
             }, {})
 
