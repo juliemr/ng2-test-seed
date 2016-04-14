@@ -1,4 +1,19 @@
-div {border: 5px solid #EDF3F3; border-radius: 1em; text-align: center}
-span {font-size: 10px;display: inline-block}
-.inner {padding: 5px; margin: 5px}
-.outer {width: 400px}
+div {
+	border: 5px solid #EDF3F3;
+	border-radius: 1em;
+	text-align: center;
+}
+
+span {
+	display: inline-block;
+	font-size: 10px;
+}
+
+.inner {
+	margin: 5px;
+	padding: 5px;
+}
+
+.outer {
+	width: 400px;
+}

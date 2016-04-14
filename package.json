@@ -1,40 +1,43 @@
 {
-  "name": "ng2-test-seed",
-  "version": "0.0.2",
-  "description": "Setup seed for Angular 2 application",
-  "license": "Apache-2.0",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/angular/ng-test-seed.git"
-  },
-  "scripts": {
-    "postinstall": "typings install --ambient",
-    "clean": "rimraf src/**/*.js src/**/*.js.map",
-    "build": "tsc",
-    "watch": "tsc --watch",
-    "serve": "http-server -p 9090 -c-1",
-    "test": "karma start karma.conf.js"
-  },
-  "dependencies": {
-    "angular2": "2.0.0-beta.12",
-    "clang-format": "^1.0.35",
-    "es6-promise": "^3.0.2",
-    "es6-shim": "^0.35.0",
-    "reflect-metadata": "0.1.2",
-    "rxjs": "5.0.0-beta.2",
-    "systemjs": "0.19.20",
-    "zone.js": "0.6.6"
-  },
-  "devDependencies": {
-    "http-server": "^0.8.5",
-    "jasmine": "2.3.2",
-    "karma": "^0.13.22",
-    "karma-chrome-launcher": "^0.2.1",
-    "karma-cli": "^0.0.4",
-    "karma-jasmine": "^0.3.6",
-    "rimraf": "^2.4.3",
-    "systemjs": "^0.19.4",
-    "typescript": "1.8.9",
-    "typings": "^0.6.6"
-  }
+	"name": "ng2-test-seed",
+	"version": "0.2.0",
+	"description": "Setup seed for Angular 2 application",
+	"license": "Apache-2.0",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/angular/ng-test-seed.git"
+	},
+	"scripts": {
+		"postinstall": "typings install",
+		"clean": "rimraf src/**/*.js src/**/*.js.map",
+		"build": "tsc",
+		"watch": "tsc --watch",
+		"serve": "http-server -p 9090 -c-1",
+		"test": "karma start karma.conf.js"
+	},
+	"dependencies": {
+		"angular2": "2.0.0-beta.15",
+		"es6-promise": "3.1.2",
+		"es6-shim": "0.35.0",
+		"reflect-metadata": "0.1.3",
+		"rxjs": "5.0.0-beta.2",
+		"systemjs": "0.19.26",
+		"zone.js": "0.6.11"
+	},
+	"devDependencies": {
+		"http-server": "0.9.0",
+		"jasmine": "2.4.1",
+		"karma": "0.13.22",
+		"karma-chrome-launcher": "0.2.3",
+		"karma-cli": "0.1.2",
+		"karma-firefox-launcher": "0.1.7",
+		"karma-ie-launcher": "0.2.0",
+		"karma-jasmine": "0.3.8",
+		"rimraf": "2.5.2",
+		"typescript": "1.8.10",
+		"typings": "0.7.12"
+	},
+	"___COMMENTS___": {
+		"rxjs": "with rxjs 5.0.0-beta.3+ installed SystemJS throws exception in IE so stick to beta.2"
+	}
 }

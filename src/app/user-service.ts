@@ -1,20 +1,21 @@
-import {LoginService} from './login-service';
 import {Injectable} from 'angular2/core';
+
+import {LoginService} from './login-service';
 
 @Injectable()
 export class UserService {
-  pin: number = 1234;
+	public pin: number = 1234;
 
-  constructor(private _loginService: LoginService) {
-  }
+	constructor(private loginService: LoginService) { }
 
-  isValidPin() {
-    return (this.pin >= 0 && this.pin < 10000);
-  }
+	public isValidPin(): boolean {
+		return this.pin >= 0
+			&& this.pin < 10000;
+	}
 
-  getGreeting() {
-    return this._loginService.login(this.pin).then((success) => {
-      return success ? 'Welcome!': 'Login failure!';
-    });
-  }
+	public getGreeting(): Promise<string> {
+		return this.loginService.login(this.pin).then((success) => {
+			return success ? 'Welcome!' : 'Login failure!';
+		});
+	}
 }
