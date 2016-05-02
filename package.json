@@ -10,7 +10,7 @@
   "scripts": {
     "postinstall": "typings install --ambient",
     "clean": "rimraf built/",
-    "copy": "cp src/{index.html,styles.css} built/",
+    "copy": "cp src/{index.html,styles.css,system-config.js} built/",
     "copytemplates": "cp src/app/{*.html,*.css} built/app/",
     "build": "tsc && npm run copy && npm run copytemplates",
     "watch": "tsc --watch",
@@ -18,13 +18,17 @@
     "test": "karma start karma.conf.js"
   },
   "dependencies": {
-    "angular2": "2.0.0-beta.16",
+    "@angular/common": "0.0.0-5",
+    "@angular/compiler": "0.0.0-5",
+    "@angular/core": "0.0.0-5",
+    "@angular/platform-browser": "0.0.0-5",
+    "@angular/platform-browser-dynamic": "0.0.0-5",
     "clang-format": "^1.0.35",
     "es6-promise": "^3.0.2",
     "es6-shim": "^0.35.0",
     "reflect-metadata": "0.1.2",
-    "rxjs": "5.0.0-beta.2",
-    "systemjs": "0.19.20",
+    "rxjs": "5.0.0-beta.6",
+    "systemjs": "0.19.26",
     "zone.js": "0.6.12"
   },
   "devDependencies": {
@@ -35,7 +39,6 @@
     "karma-cli": "^0.0.4",
     "karma-jasmine": "^0.3.6",
     "rimraf": "^2.4.3",
-    "systemjs": "^0.19.4",
     "typescript": "1.8.10",
     "typings": "^0.6.6"
   }

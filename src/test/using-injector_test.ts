@@ -3,10 +3,10 @@ import {
   describe,
   expect,
   inject
-} from 'angular2/testing';
+} from '@angular/core/testing';
 import {
   APP_ID
-} from 'angular2/core';
+} from '@angular/core';
 
 
 describe('default test injector', () => {

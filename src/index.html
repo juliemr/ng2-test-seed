@@ -5,24 +5,21 @@
   <base href="/built/" />
   <link rel="stylesheet" href="styles.css">
 
-  <script src="../node_modules/es6-shim/es6-shim.min.js"></script>
+  <script src="../node_modules/reflect-metadata/Reflect.js"></script>
+  <script src="../node_modules/zone.js/dist/zone.js"></script>
+  <script src="https://code.angularjs.org/tools/system.js"></script>
+  <script src="https://code.angularjs.org/2.0.0-beta.16/Rx.js"></script>
+  <!-- <script src="../node_modules/es6-shim/es6-shim.min.js"></script>
   <script src="../node_modules/systemjs/dist/system-polyfills.js"></script>
 
   <script src="../node_modules/systemjs/dist/system.src.js"></script>
 
-  <script src="../node_modules/rxjs/bundles/Rx.js"></script>
-  <script src="../node_modules/angular2/bundles/angular2.dev.js"></script>
-  <script src="../node_modules/angular2/bundles/angular2-polyfills.js"></script>
+  <script src="../node_modules/rxjs/bundles/Rx.js"></script> -->
 
   <script>
-    System.config({
-      packages: {
-        'app': {
-          defaultExtension: 'js'
-        }
-      }
-    });
-    System.import('app/bootstrap').catch(function(err) {
+    System.import('system-config.js').then(function () {
+      System.import('app/bootstrap');
+    }).catch(function(err) {
       console.log('error while importing:');
       console.log(err);
       console.log(err.stack);
