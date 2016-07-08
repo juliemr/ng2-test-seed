@@ -10,8 +10,8 @@
   "scripts": {
     "postinstall": "typings install --ambient",
     "clean": "rimraf built/",
-    "copy": "cp src/{index.html,styles.css,system-config.js} built/",
-    "copytemplates": "cp src/app/{*.html,*.css} built/app/",
+    "copy": "cp src/index.html src/styles.css src/system-config.js built/",
+    "copytemplates": "cp src/app/*.html src/app/*.css built/app/",
     "build": "tsc && npm run copy && npm run copytemplates",
     "watch": "tsc --watch",
     "serve": "http-server -p 9090 -c-1",
