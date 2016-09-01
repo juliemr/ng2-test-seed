@@ -4,8 +4,8 @@ import {UserService} from './user-service';
 @Component({
   selector: 'my-greeting',
   template: `
-    <input [(ngModel)]="user.pin" placeholder="1111" type="number"/>
-    <button (click)="enter()">Enter</button>
+    <input #pinbox placeholder="1111" type="number"/>
+    <button (click)="enter(pinbox.value)">Enter</button>
     <h3>Status: {{greeting}}</h3>
   `,
   styles :[`
@@ -20,7 +20,8 @@ export class GreetingComponent {
   constructor(public user: UserService) {
   }
 
-  enter() {
+  enter(pin: number) {
+    this.user.pin = pin;
     this.greeting = 'Processing...';
     this.pending = this.user.getGreeting().then((greeting) => {
       this.greeting = greeting;

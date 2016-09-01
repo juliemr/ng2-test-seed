@@ -1,5 +1,4 @@
 import { inject, async, TestBed, fakeAsync, tick } from '@angular/core/testing';
-import { provide } from '@angular/core';
 import { UserService } from '../app/user-service';
 import { LoginService } from '../app/login-service';
 
@@ -50,7 +49,7 @@ class MockLoginService extends LoginService {
 describe('with mocked login', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [provide(LoginService, { useClass: MockLoginService }), UserService]
+      providers: [{provide: LoginService, useClass: MockLoginService}, UserService]
     });
   });
 
