@@ -35,6 +35,7 @@ System.config(
     'npm:': 'node_modules/'
   },
   map: {
+    'app': 'built',
     '@angular/core': 'npm:@angular/core/bundles/core.umd.js',
     '@angular/common': 'npm:@angular/common/bundles/common.umd.js',
     '@angular/compiler': 'npm:@angular/compiler/bundles/compiler.umd.js',
@@ -58,6 +59,9 @@ System.config(
     'rxjs': 'npm:rxjs',
   },
   packages: {
+    'app': {
+       defaultExtension: 'js'
+     },
     'rxjs': {
       defaultExtension: 'js'
     }
