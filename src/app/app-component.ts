@@ -1,6 +1,4 @@
 import {Component} from '@angular/core';
-import {GreetingComponent} from './greeting-component';
-import {BorderComponent} from './border-component';
 
 @Component({
   selector: 'my-app',
@@ -9,7 +7,6 @@ import {BorderComponent} from './border-component';
       <my-greeting></my-greeting>
     </my-fancy-border>
   `,
-  directives: [GreetingComponent, BorderComponent]
 })
 export class AppComponent {
 }

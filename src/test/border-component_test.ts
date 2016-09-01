@@ -9,7 +9,6 @@ import { BorderComponent } from '../app/border-component';
 
 @Component({
   template: '',
-  directives: [BorderComponent]
 })
 class TestComponent {
 }
@@ -17,7 +16,7 @@ class TestComponent {
 describe('greeting component', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [TestComponent]
+      declarations: [TestComponent, BorderComponent]
     });
   });
 

@@ -17,6 +17,9 @@ module.exports = function(config) {
 
       // Zone.js dependencies
       'node_modules/zone.js/dist/zone.js',
+      'node_modules/zone.js/dist/long-stack-trace-zone.js',
+      'node_modules/zone.js/dist/proxy.js',
+      'node_modules/zone.js/dist/sync-test.js',
       'node_modules/zone.js/dist/jasmine-patch.js',
       'node_modules/zone.js/dist/async-test.js',
       'node_modules/zone.js/dist/fake-async-test.js',
@@ -56,7 +59,7 @@ module.exports = function(config) {
     reporters: ['progress'],
     port: 9876,
     colors: true,
-    logLevel: config.LOG_INFO,
+    logLevel: config.DEBUG,
     autoWatch: true,
     browsers: ['Chrome'],
     singleRun: false

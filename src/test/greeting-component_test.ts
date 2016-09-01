@@ -6,8 +6,6 @@ import {
   ComponentFixture,
   TestBed
 } from '@angular/core/testing';
-import { DeprecatedFormsModule } from '@angular/common';
-import { provide } from '@angular/core';
 import { UserService } from '../app/user-service';
 import { LoginService } from '../app/login-service';
 import { GreetingComponent } from '../app/greeting-component';
@@ -23,10 +21,9 @@ describe('greeting component', () => {
     TestBed.configureTestingModule({
       declarations: [GreetingComponent],
       providers: [
-        provide(LoginService, { useClass: MockLoginService }),
+        {provide: LoginService, useClass: MockLoginService },
         UserService
-      ],
-      imports: [DeprecatedFormsModule]
+      ]
     });
   });
 
