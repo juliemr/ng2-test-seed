@@ -12,7 +12,9 @@
     "clean": "rimraf built/",
     "copy": "cp src/{index.html,styles.css,system-config.js} built/",
     "copytemplates": "cp src/app/{*.html,*.css} built/app/",
-    "build": "tsc && npm run copy && npm run copytemplates",
+    "prebuild": "npm run copy && npm run copytemplates",
+    "build": "tsc",
+    "prewatch": "npm run copy && npm run copytemplates",
     "watch": "tsc --watch",
     "serve": "http-server -p 9090 -c-1",
     "test": "karma start karma.conf.js"
