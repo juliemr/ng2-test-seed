@@ -14,7 +14,7 @@
     "copytemplates": "cp src/app/{*.html,*.css} built/app/",
     "build": "tsc && npm run copy && npm run copytemplates",
     "watch": "tsc --watch",
-    "serve": "http-server -p 9090 -c-1",
+    "serve": "http-server -p 9090 -c -1",
     "test": "karma start karma.conf.js"
   },
   "dependencies": {
